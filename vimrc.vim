@@ -21,7 +21,16 @@ en
 
 fu! s:packager_init(p) abort
   cal a:p.add('kristijanhusak/vim-packager', { 'type': 'opt' })
+  cal a:p.add('tpope/vim-sensible')
+  cal a:p.add('sonph/onehalf', { 'rtp': 'vim' })
+  cal a:p.add('vim-airline/vim-airline')
 endf
 
 pa vim-packager
 cal packager#setup(function('s:packager_init'))
+
+se tgc
+
+try
+  colo onehalfdark
+cat | endt

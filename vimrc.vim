@@ -24,7 +24,10 @@ fu! s:packager_init(p) abort
   cal a:p.add('tpope/vim-sensible')
   cal a:p.add('sonph/onehalf', { 'rtp': 'vim' })
   cal a:p.add('vim-airline/vim-airline')
+  cal a:p.add('tpope/vim-sleuth')
+  cal a:p.add('jiangmiao/auto-pairs')
   cal a:p.add('lambdalisue/gina.vim')
+  cal a:p.add('airblade/vim-gitgutter')
 endf
 
 pa vim-packager

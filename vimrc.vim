@@ -22,7 +22,7 @@ en
 fu! s:packager_init(p) abort
   cal a:p.add('kristijanhusak/vim-packager', { 'type': 'opt' })
   cal a:p.add('tpope/vim-sensible')
-  cal a:p.add('sonph/onehalf', { 'rtp': 'vim' })
+  cal a:p.add('lifepillar/vim-gruvbox8')
   cal a:p.add('vim-airline/vim-airline')
   cal a:p.add('tpope/vim-sleuth')
   cal a:p.add('jiangmiao/auto-pairs')
@@ -33,8 +33,10 @@ endf
 pa vim-packager
 cal packager#setup(function('s:packager_init'))
 
+let g:airline_theme = 'gruvbox8'
+se bg=dark
 se tgc
 
 try
-  colo onehalfdark
+  colo gruvbox8_hard
 cat | endt

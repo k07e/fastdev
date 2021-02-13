@@ -55,6 +55,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('liuchengxu/vim-which-key')
   cal a:p.add('mbbill/undotree')
   cal a:p.add('liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } })
+  cal a:p.add('simeji/winresizer')
 endf
 
 pa vim-packager
@@ -92,6 +93,8 @@ let g:which_key_map.p.u.f = 'focus'
 let g:which_key_map.p.u.h = 'hide'
 let g:which_key_map.p.u.s = 'show'
 let g:which_key_map.p.u.t = 'toggle'
+let g:which_key_map.p.w = 'winresizer'
+let g:winresizer_start_key = '<Bslash>pw'
 se bg=dark
 se bk
 se cul

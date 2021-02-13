@@ -10,6 +10,13 @@ declare -A ZINIT=(
 )
 ZPFX="${cache_dir}/zinit/polaris"
 
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+HISTFILE="${cache_dir}/zsh_history"
+HISTSIZE=100000000
+SAVEHIST=100000000
+
 . "${ZINIT[BIN_DIR]}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit

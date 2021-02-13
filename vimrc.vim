@@ -28,12 +28,16 @@ fu! s:packager_init(p) abort
   cal a:p.add('jiangmiao/auto-pairs')
   cal a:p.add('lambdalisue/gina.vim')
   cal a:p.add('airblade/vim-gitgutter')
+  cal a:p.add('mattn/vim-lsp-settings', { 'requires': 'prabirshrestha/vim-lsp' })
+  cal a:p.add('prabirshrestha/asyncomplete-lsp.vim', { 'requires': 'prabirshrestha/asyncomplete.vim' })
+  cal a:p.add('hrsh7th/vim-vsnip-integ', { 'requires': 'hrsh7th/vim-vsnip' })
 endf
 
 pa vim-packager
 cal packager#setup(function('s:packager_init'))
 
 let g:airline_theme = 'gruvbox8'
+let g:lsp_settings_servers_dir = s:cache_dir . '/vim-lsp-settings/servers'
 se bg=dark
 se tgc
 

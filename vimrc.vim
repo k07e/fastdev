@@ -53,6 +53,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('prabirshrestha/asyncomplete-lsp.vim', { 'requires': 'prabirshrestha/asyncomplete.vim' })
   cal a:p.add('hrsh7th/vim-vsnip-integ', { 'requires': 'hrsh7th/vim-vsnip' })
   cal a:p.add('liuchengxu/vim-which-key')
+  cal a:p.add('mbbill/undotree')
 endf
 
 pa vim-packager
@@ -62,6 +63,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox8'
 let g:lsp_settings_servers_dir = s:cache_dir . '/vim-lsp-settings/servers'
 let g:which_key_map = {}
+let g:which_key_map.p = { 'name': '+plugin' }
+let g:which_key_map.p.u = { 'name': '+undotree' }
+let g:which_key_map.p.u.f = 'focus'
+let g:which_key_map.p.u.h = 'hide'
+let g:which_key_map.p.u.s = 'show'
+let g:which_key_map.p.u.t = 'toggle'
 se bg=dark
 se bk
 se cul
@@ -75,9 +82,14 @@ try
   colo gruvbox8_hard
 cat | endt
 
-try
-  cal which_key#register("\<Bslash>", 'g:which_key_map')
-cat | endt
-
 nn <silent><leader> :<c-u>WhichKey '<Bslash>'<CR>
+nn <silent><leader>puf :UndotreeFocus<CR>
+nn <silent><leader>puh :UndotreeHide<CR>
+nn <silent><leader>pus :UndotreeShow<CR>
+nn <silent><leader>put :UndotreeToggle<CR>
 vn <silent><leader> :<c-u>WhichKeyVisual '<Bslash>'<CR>
+
+aug vimrc
+  au!
+  au VimEnter * cal which_key#register("\<Bslash>", 'g:which_key_map')
+aug END

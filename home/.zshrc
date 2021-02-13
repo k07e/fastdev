@@ -31,5 +31,10 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit ice as'program' ver'v0.8.0' src'asdf.sh'; zinit light asdf-vm/asdf
 zinit ice as'program' make"PREFIX=\"${ZPFX}\""; zinit light tj/n
+zinit light olets/zsh-abbr
+
+abbr -S --quiet e=vim
+abbr -S --quiet g=git
+abbr -S --quiet q=exit
 
 . "${ZDOTDIR}/.p10k.zsh"

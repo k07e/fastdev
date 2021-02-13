@@ -11,6 +11,10 @@ let s:vim_packager_repo_root = s:cache_dir . '/runtime/pack/packager/opt/vim-pac
 let s:zinit_repo_root = s:data_dir . '/zsh/cache/zinit/bin'
 let &sh = system('which zsh | xargs printf')
 
+let s:bdir = s:cache_dir . '/backups'
+let s:dir = s:cache_dir . '/swapfiles'
+let s:udir = s:cache_dir . '/undofiles'
+
 if !isdirectory(s:vim_packager_repo_root)
   exe 'sil !git clone https://github.com/kristijanhusak/vim-packager.git ' . s:vim_packager_repo_root
 en
@@ -18,6 +22,23 @@ en
 if !isdirectory(s:zinit_repo_root)
   exe 'sil !git clone https://github.com/zdharma/zinit.git ' . s:zinit_repo_root
 en
+
+if !isdirectory(s:bdir)
+  cal mkdir(s:bdir)
+en
+
+if !isdirectory(s:dir)
+  cal mkdir(s:dir)
+en
+
+if !isdirectory(s:udir)
+  cal mkdir(s:udir)
+en
+
+let &bdir = s:cache_dir . '/backups'
+let &dir = s:cache_dir . '/swapfiles'
+let &udir = s:cache_dir . '/undofiles'
+let &vi = s:cache_dir . '/viminfo'
 
 fu! s:packager_init(p) abort
   cal a:p.add('kristijanhusak/vim-packager', { 'type': 'opt' })
@@ -39,7 +60,10 @@ cal packager#setup(function('s:packager_init'))
 let g:airline_theme = 'gruvbox8'
 let g:lsp_settings_servers_dir = s:cache_dir . '/vim-lsp-settings/servers'
 se bg=dark
+se bk
+se swf
 se tgc
+se udf
 
 try
   colo gruvbox8_hard

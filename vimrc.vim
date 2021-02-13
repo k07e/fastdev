@@ -52,6 +52,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('mattn/vim-lsp-settings', { 'requires': 'prabirshrestha/vim-lsp' })
   cal a:p.add('prabirshrestha/asyncomplete-lsp.vim', { 'requires': 'prabirshrestha/asyncomplete.vim' })
   cal a:p.add('hrsh7th/vim-vsnip-integ', { 'requires': 'hrsh7th/vim-vsnip' })
+  cal a:p.add('liuchengxu/vim-which-key')
 endf
 
 pa vim-packager
@@ -60,6 +61,7 @@ cal packager#setup(function('s:packager_init'))
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox8'
 let g:lsp_settings_servers_dir = s:cache_dir . '/vim-lsp-settings/servers'
+let g:which_key_map = {}
 se bg=dark
 se bk
 se cul
@@ -72,3 +74,10 @@ se udf
 try
   colo gruvbox8_hard
 cat | endt
+
+try
+  cal which_key#register("\<Bslash>", 'g:which_key_map')
+cat | endt
+
+nn <silent><leader> :<c-u>WhichKey '<Bslash>'<CR>
+vn <silent><leader> :<c-u>WhichKeyVisual '<Bslash>'<CR>

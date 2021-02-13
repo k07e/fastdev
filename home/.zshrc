@@ -17,11 +17,15 @@ HISTFILE="${cache_dir}/zsh_history"
 HISTSIZE=100000000
 SAVEHIST=100000000
 
+export N_PREFIX="${data_dir}/opt/n"
+export PATH="${N_PREFIX}/bin:${PATH}"
+
 . "${ZINIT[BIN_DIR]}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 zinit light zdharma/fast-syntax-highlighting
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice as'program' make"PREFIX=\"${ZPFX}\""; zinit light tj/n
 
 . "${ZDOTDIR}/.p10k.zsh"

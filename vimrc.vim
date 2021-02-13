@@ -121,6 +121,7 @@ let g:winresizer_start_key = '<Bslash>pw'
 se bg=dark
 se bk
 se cul
+se mouse=a
 se nu
 se rnu
 se swf

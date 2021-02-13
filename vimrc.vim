@@ -56,6 +56,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('mbbill/undotree')
   cal a:p.add('liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } })
   cal a:p.add('simeji/winresizer')
+  cal a:p.add('voldikss/vim-floaterm')
 endf
 
 pa vim-packager
@@ -63,6 +64,16 @@ cal packager#setup(function('s:packager_init'))
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox8'
+let g:floaterm_autoclose = 2
+let g:floaterm_keymap_first = '<leader>pff'
+let g:floaterm_keymap_hide = '<leader>pfh'
+let g:floaterm_keymap_kill = '<leader>pfk'
+let g:floaterm_keymap_last = '<leader>pfl'
+let g:floaterm_keymap_new = '<leader>pfN'
+let g:floaterm_keymap_next = '<leader>pfn'
+let g:floaterm_keymap_prev = '<leader>pfp'
+let g:floaterm_keymap_show = '<leader>pfs'
+let g:floaterm_keymap_toggle = '<leader>pft'
 let g:lsp_settings_servers_dir = s:cache_dir . '/vim-lsp-settings/servers'
 let g:which_key_map = {}
 let g:which_key_map.p = { 'name': '+plugin' }
@@ -76,6 +87,8 @@ let g:which_key_map.p.c.C.h = 'command history'
 let g:which_key_map.p.c.G = { 'name': '+git' }
 let g:which_key_map.p.c.G.d = 'diff files'
 let g:which_key_map.p.c.G.f = 'files'
+let g:which_key_map.p.c.P = { 'name': '+plugin' }
+let g:which_key_map.p.c.P.f = 'floaterm'
 let g:which_key_map.p.c.b = 'buffers'
 let g:which_key_map.p.c.c = 'commits'
 let g:which_key_map.p.c.f = 'files'
@@ -88,6 +101,16 @@ let g:which_key_map.p.c.r = 'registers'
 let g:which_key_map.p.c.s = 'search history'
 let g:which_key_map.p.c.w = 'windows'
 let g:which_key_map.p.c.y = 'yanks'
+let g:which_key_map.p.f = { 'name': '+floaterm' }
+let g:which_key_map.p.f.N = 'new'
+let g:which_key_map.p.f.f = 'switch to first'
+let g:which_key_map.p.f.h = 'hide'
+let g:which_key_map.p.f.k = 'kill'
+let g:which_key_map.p.f.l = 'switch to last'
+let g:which_key_map.p.f.n = 'switch to next'
+let g:which_key_map.p.f.p = 'switch to previous'
+let g:which_key_map.p.f.s = 'show'
+let g:which_key_map.p.f.t = 'toggle'
 let g:which_key_map.p.u = { 'name': '+undotree' }
 let g:which_key_map.p.u.f = 'focus'
 let g:which_key_map.p.u.h = 'hide'
@@ -115,6 +138,7 @@ nn <silent><leader>pcCc :Clap command<CR>
 nn <silent><leader>pcCh :Clap command_history<CR>
 nn <silent><leader>pcGd :Clap git_diff_files<CR>
 nn <silent><leader>pcGf :Clap gfiles<CR>
+nn <silent><leader>pcPf :Clap floaterm<CR>
 nn <silent><leader>pcb :Clap buffers<CR>
 nn <silent><leader>pcc :Clap commits<CR>
 nn <silent><leader>pcf :Clap files<CR>
@@ -127,6 +151,15 @@ nn <silent><leader>pcr :Clap registers<CR>
 nn <silent><leader>pcs :Clap search_history<CR>
 nn <silent><leader>pcw :Clap windows<CR>
 nn <silent><leader>pcy :Clap yanks<CR>
+nn <silent><leader>pfN :FloatermNew<CR>
+nn <silent><leader>pff :FloatermFirst<CR>
+nn <silent><leader>pfh :FloatermHide<CR>
+nn <silent><leader>pfk :FloatermKill<CR>
+nn <silent><leader>pfl :FloatermLast<CR>
+nn <silent><leader>pfn :FloatermNext<CR>
+nn <silent><leader>pfp :FloatermPrev<CR>
+nn <silent><leader>pfs :FloatermShow<CR>
+nn <silent><leader>pft :FloatermToggle<CR>
 nn <silent><leader>puf :UndotreeFocus<CR>
 nn <silent><leader>puh :UndotreeHide<CR>
 nn <silent><leader>pus :UndotreeShow<CR>

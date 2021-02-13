@@ -17,6 +17,8 @@ HISTFILE="${cache_dir}/zsh_history"
 HISTSIZE=100000000
 SAVEHIST=100000000
 
+export ASDF_DIR="${ZINIT[PLUGINS_DIR]}/asdf-vm---asdf"
+export ASDF_DATA_DIR="${ZINIT[PLUGINS_DIR]}/asdf-vm---asdf"
 export N_PREFIX="${data_dir}/opt/n"
 export PATH="${N_PREFIX}/bin:${PATH}"
 
@@ -26,6 +28,7 @@ autoload -Uz _zinit
 
 zinit light zdharma/fast-syntax-highlighting
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice as'program' ver'v0.8.0' src'asdf.sh'; zinit light asdf-vm/asdf
 zinit ice as'program' make"PREFIX=\"${ZPFX}\""; zinit light tj/n
 
 . "${ZDOTDIR}/.p10k.zsh"

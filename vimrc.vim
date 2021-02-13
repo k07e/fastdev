@@ -57,10 +57,14 @@ endf
 pa vim-packager
 cal packager#setup(function('s:packager_init'))
 
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox8'
 let g:lsp_settings_servers_dir = s:cache_dir . '/vim-lsp-settings/servers'
 se bg=dark
 se bk
+se cul
+se nu
+se rnu
 se swf
 se tgc
 se udf

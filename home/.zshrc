@@ -27,6 +27,7 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit ice as'program' ver'v0.8.0' src'asdf.sh'; zinit light asdf-vm/asdf
 zinit ice as'program' make"PREFIX=\"${ZPFX}\""; zinit light tj/n

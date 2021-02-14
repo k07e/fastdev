@@ -58,7 +58,7 @@ abbr -S --quiet la='ls -A'
 abbr -S --quiet ll='ls -Al'
 abbr -S --quiet q=exit
 abbr -S --quiet t=tree
-alias egrep='grep -E'
+alias egrep='grep -E --color=auto'
 alias ex='vim -e'
 alias grep='grep --color=auto'
 alias rvim='vim -Z'

@@ -132,6 +132,21 @@ try
   colo gruvbox8_hard
 cat | endt
 
+nn <silent><c-k>" :bel ter ++close<CR>
+nn <silent><c-k>% :vert bel ter ++close<CR>
+nn <silent><c-k>0 :1tabn<CR>
+nn <silent><c-k>1 :2tabn<CR>
+nn <silent><c-k>2 :3tabn<CR>
+nn <silent><c-k>3 :4tabn<CR>
+nn <silent><c-k>4 :5tabn<CR>
+nn <silent><c-k>5 :6tabn<CR>
+nn <silent><c-k>6 :7tabn<CR>
+nn <silent><c-k>7 :8tabn<CR>
+nn <silent><c-k>8 :9tabn<CR>
+nn <silent><c-k>9 :10tabn<CR>
+nn <silent><c-k><c-k> <c-k>
+nn <silent><c-k>c :tab ter ++close<CR>
+nn <silent><c-k>x :q!<CR>
 nn <silent><leader> :<c-u>WhichKey '<Bslash>'<CR>
 nn <silent><leader>pcBc :Clap bcommits<CR>
 nn <silent><leader>pcBl :Clap blines<CR>
@@ -165,6 +180,22 @@ nn <silent><leader>puf :UndotreeFocus<CR>
 nn <silent><leader>puh :UndotreeHide<CR>
 nn <silent><leader>pus :UndotreeShow<CR>
 nn <silent><leader>put :UndotreeToggle<CR>
+tno <silent><c-k>" <c-w>:bel ter ++close<CR>
+tno <silent><c-k>% <c-w>:vert bel ter ++close<CR>
+tno <silent><c-k>0 <c-w>:1tabn<CR>
+tno <silent><c-k>1 <c-w>:2tabn<CR>
+tno <silent><c-k>2 <c-w>:3tabn<CR>
+tno <silent><c-k>3 <c-w>:4tabn<CR>
+tno <silent><c-k>4 <c-w>:5tabn<CR>
+tno <silent><c-k>5 <c-w>:6tabn<CR>
+tno <silent><c-k>6 <c-w>:7tabn<CR>
+tno <silent><c-k>7 <c-w>:8tabn<CR>
+tno <silent><c-k>8 <c-w>:9tabn<CR>
+tno <silent><c-k>9 <c-w>:10tabn<CR>
+tno <silent><c-k>: <c-w>:
+tno <silent><c-k><c-k> <c-k>
+tno <silent><c-k>c <c-w>:tab ter ++close<CR>
+tno <silent><c-k>x <c-w>:q!<CR>
 vn <silent><leader> :<c-u>WhichKeyVisual '<Bslash>'<CR>
 
 aug vimrc

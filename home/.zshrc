@@ -32,9 +32,18 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit ice as'program' ver'v0.8.0' src'asdf.sh'; zinit light asdf-vm/asdf
 zinit ice as'program' make"PREFIX=\"${ZPFX}\""; zinit light tj/n
 zinit light olets/zsh-abbr
+zinit ice as'program' make"install PREFIX=\"${ZPFX}\""; zinit light aristocratos/bashtop
+zinit ice from'gh-r' as'program' mv'bat* -> bat' pick'bat/bat'; zinit load sharkdp/bat
+zinit ice from'gh-r' as'program' mv'delta* -> delta' pick'delta/delta'; zinit load dandavison/delta
+zinit ice from'gh-r' as'program' mv'fd* -> fd' pick'fd/fd'; zinit load sharkdp/fd
+zinit ice from'gh-r' as'program' mv'hyperfine* -> hyperfine' pick'hyperfine/hyperfine'; zinit load sharkdp/hyperfine
+zinit ice from'gh-r' as'program' mv'lsd* -> lsd' pick'lsd/lsd'; zinit load Peltoche/lsd
+zinit ice from'gh-r' as'program' mv'ripgrep* -> ripgrep' pick'ripgrep/rg'; zinit load BurntSushi/ripgrep
+zinit ice from'gh-r' as'program'; zinit load lotabout/skim
 
 abbr -S --quiet e=vim
 abbr -S --quiet g=git
 abbr -S --quiet q=exit
+alias ls='ls --color=auto'
 
 . "${ZDOTDIR}/.p10k.zsh"

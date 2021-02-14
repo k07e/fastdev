@@ -41,9 +41,28 @@ zinit ice from'gh-r' as'program' mv'lsd* -> lsd' pick'lsd/lsd'; zinit load Pelto
 zinit ice from'gh-r' as'program' mv'ripgrep* -> ripgrep' pick'ripgrep/rg'; zinit load BurntSushi/ripgrep
 zinit ice from'gh-r' as'program'; zinit load lotabout/skim
 
+if type lsd >/dev/null 2>&1; then
+  alias ls=lsd
+  alias tree='lsd --tree'
+else
+  alias ls='ls --color=auto'
+fi
+
 abbr -S --quiet e=vim
 abbr -S --quiet g=git
+abbr -S --quiet ga='git add'
+abbr -S --quiet gc='git commit'
+abbr -S --quiet gs='git status'
+abbr -S --quiet l=ls
+abbr -S --quiet la='ls -A'
+abbr -S --quiet ll='ls -Al'
 abbr -S --quiet q=exit
-alias ls='ls --color=auto'
+abbr -S --quiet t=tree
+alias egrep='grep -E'
+alias ex='vim -e'
+alias grep='grep --color=auto'
+alias rvim='vim -Z'
+alias vi='vim -v'
+alias view='vim -R'
 
 . "${ZDOTDIR}/.p10k.zsh"

@@ -47,6 +47,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('vim-airline/vim-airline')
   cal a:p.add('tpope/vim-sleuth')
   cal a:p.add('jiangmiao/auto-pairs')
+  cal a:p.add('tpope/vim-rsi')
   cal a:p.add('lambdalisue/gina.vim')
   cal a:p.add('airblade/vim-gitgutter')
   cal a:p.add('mattn/vim-lsp-settings', { 'requires': 'prabirshrestha/vim-lsp' })

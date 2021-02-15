@@ -56,6 +56,7 @@ zinit ice from'gh-r' as'program' mv'hub* -> hub' pick'hub/bin/hub'; zinit load g
 zinit ice from'gh-r' as'program' mv'hyperfine* -> hyperfine' pick'hyperfine/hyperfine'; zinit load sharkdp/hyperfine
 zinit ice from'gh-r' as'program' mv'lsd* -> lsd' pick'lsd/lsd'; zinit load Peltoche/lsd
 zinit ice from'gh-r' as'program' mv'pastel* -> pastel' pick'pastel/pastel'; zinit load sharkdp/pastel
+zinit ice from'gh-r' as'program' mv'rclone* -> rclone' pick'rclone/rclone' bpick'*.zip'; zinit load rclone/rclone
 zinit ice from'gh-r' as'program' mv'ripgrep* -> ripgrep' pick'ripgrep/rg'; zinit load BurntSushi/ripgrep
 zinit ice from'gh-r' as'program' pick"build/$(uname -m)*/broot"; zinit load Canop/broot
 zinit ice from'gh-r' as'program'; zinit load Rigellute/spotify-tui

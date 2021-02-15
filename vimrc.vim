@@ -46,6 +46,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('lifepillar/vim-gruvbox8')
   cal a:p.add('vim-airline/vim-airline')
   cal a:p.add('tpope/vim-sleuth')
+  cal a:p.add('editorconfig/editorconfig-vim')
   cal a:p.add('jiangmiao/auto-pairs')
   cal a:p.add('tpope/vim-rsi')
   cal a:p.add('lambdalisue/gina.vim')

@@ -213,6 +213,9 @@ tno <silent><c-k>p <c-w>:tabp<CR>
 tno <silent><c-k>x <c-w>:q!<CR>
 vn <silent><leader> :<c-u>WhichKeyVisual '<Bslash>'<CR>
 
+com G Gina status
+com Gc Gina commit
+
 aug vimrc
   au!
   au VimEnter * cal which_key#register("\<Bslash>", 'g:which_key_map')

@@ -59,6 +59,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } })
   cal a:p.add('simeji/winresizer')
   cal a:p.add('voldikss/vim-floaterm')
+  cal a:p.add('vimwiki/vimwiki')
 endf
 
 pa vim-packager

@@ -51,6 +51,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('tpope/vim-rsi')
   cal a:p.add('lambdalisue/gina.vim')
   cal a:p.add('airblade/vim-gitgutter')
+  cal a:p.add('907th/vim-auto-save')
   cal a:p.add('mattn/vim-lsp-settings', { 'requires': 'prabirshrestha/vim-lsp' })
   cal a:p.add('prabirshrestha/asyncomplete-lsp.vim', { 'requires': 'prabirshrestha/asyncomplete.vim' })
   cal a:p.add('hrsh7th/vim-vsnip-integ', { 'requires': 'hrsh7th/vim-vsnip' })

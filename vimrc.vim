@@ -61,6 +61,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('simeji/winresizer')
   cal a:p.add('voldikss/vim-floaterm')
   cal a:p.add('vimwiki/vimwiki')
+  cal a:p.add('amadeus/vim-convert-color-to')
 endf
 
 pa vim-packager

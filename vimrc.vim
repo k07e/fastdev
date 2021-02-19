@@ -49,6 +49,7 @@ fu! s:packager_init(p) abort
   cal a:p.add('editorconfig/editorconfig-vim')
   cal a:p.add('jiangmiao/auto-pairs')
   cal a:p.add('tpope/vim-rsi')
+  cal a:p.add('tpope/vim-surround')
   cal a:p.add('lambdalisue/gina.vim')
   cal a:p.add('airblade/vim-gitgutter')
   cal a:p.add('907th/vim-auto-save')
